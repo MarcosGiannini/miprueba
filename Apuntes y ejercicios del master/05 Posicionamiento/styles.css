@@ -1,0 +1,22 @@
+.box {
+    width: 200px;
+    height: 200px;
+    border: 5px solid black;
+}
+
+#element {
+    position: sticky;
+    top: 20px; 
+    left: 40px;
+}
+
+.box1 {
+    width: 200px;
+    height: 200px;
+    border: 5px solid green;
+}
+#element1 {
+    position: relativa;
+    top: 20px; 
+    left: 40px;
+}
