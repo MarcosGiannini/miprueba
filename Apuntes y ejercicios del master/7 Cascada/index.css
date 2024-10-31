@@ -1,0 +1,31 @@
+#outer a{
+background-color: palevioletred;
+width: 50%;
+border-color: aqua;
+border-width: 10px;
+border-style: initial;
+}
+
+#outer #inner a{
+    background-color: rgb(122, 174, 54);
+    width: 50%;
+    border-color: aqua;
+    border-width: 10px;
+    border-style: initial;
+    }
+
+#outer div ul .nav a {
+    color: white;
+}
+
+body {
+    font-size: 43px;
+}
+
+div {
+    font-size: 14px;
+}
+
+p {
+    font-size: 60px;
+}

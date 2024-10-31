@@ -1,0 +1,16 @@
+[href*="google"] {
+background: gold;
+color: aquamarine;
+padding: 16px;
+}
+
+[title="leben"] {
+    text-decoration: solid;
+    background-color: black;
+    color: aqua;
+}
+
+[href$=".pdf"] {
+    background-color: brown;
+    color: #000;
+}
