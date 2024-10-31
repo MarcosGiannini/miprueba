@@ -1,0 +1,18 @@
+div {
+    padding: 4px;
+    margin: 4px;
+    background-color: aqua;
+}
+
+p {
+    color:blueviolet;
+    text-decoration: underline;
+}
+
+#primero {
+    border: 6px red solid;
+}
+
+.fondo-verde {
+    background-color: green;
+}

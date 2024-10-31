@@ -1,0 +1,27 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+body {
+    font-size: 32px;
+    font-family: "Raleway", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: bisque;
+}
+
+a:hover {
+ color: blueviolet;    
+}
+
+p {
+    font-size: 28px;
+
+    border-style: groove;
+    border-width: 10px;
+}
+
+div {
+    width: 60%;
+    background-color: palevioletred;
+}

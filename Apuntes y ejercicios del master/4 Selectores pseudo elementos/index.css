@@ -1,0 +1,20 @@
+p::selection {
+    background: gray;
+    color:papayawhip;
+    font-size: larger;
+}
+
+#brand::after {
+    content: "0";
+    padding-right: 14px;
+    color: aqua;
+}
+
+p::first-letter {
+    font: 24px bold;
+}
+
+p:not(#brand) {
+    font-size: 22px;
+    color: peru;
+}
