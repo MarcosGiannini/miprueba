@@ -1,0 +1,57 @@
+/* Estilos generales */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+p {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los contenedores */
+.contenedor-order, .contenedor-grow, .contenedor-shrink, .contenedor-basis, .contenedor-align-self {
+  display: flex;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 80%;
+}
+
+/* Estilo para la propiedad 'order' */
+.order-item {
+  order: 1; /* Se mueve al final */
+}
+
+/* Estilo para la propiedad 'flex-grow' */
+.grow-item {
+  flex-grow: 2; /* Crece más que los otros elementos */
+}
+
+/* Estilo para la propiedad 'flex-shrink' */
+.shrink-item {
+  flex-shrink: 3; /* Se encoge más que los otros elementos */
+}
+
+/* Estilo para la propiedad 'flex-basis' */
+.basis-item {
+  flex-basis: 150px; /* Tamaño base inicial de 150px */
+}
+
+/* Estilo para la propiedad 'align-self' */
+.align-self-item {
+  align-self: center; /* Solo este elemento se alinea al centro verticalmente */
+}
+
+/* Estilos para los elementos */
+.item {
+  width: 50px;
+  height: 50px;
+  background-color: lightgreen;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
