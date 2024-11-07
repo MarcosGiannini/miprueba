@@ -1,0 +1,26 @@
+/* Estilos generales */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el contenedor de Grid */
+.contenedor-grid {
+  display: grid;
+  grid-template-columns: 100px 100px 100px; /* Tres columnas de 100px */
+  grid-template-rows: 100px 100px; /* Dos filas de 100px */
+  gap: 10px; /* Espacio de 10px entre celdas */
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  width: fit-content;
+}
+
+/* Estilos para los elementos de la cuadrícula */
+.item {
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}
