@@ -1,54 +1,54 @@
-🌟 Apuntes sobre las Propiedades de Flexbox para los Hijos
-En Flexbox, los elementos hijos pueden usar propiedades específicas que controlan cómo se comportan dentro del contenedor padre. Vamos a ver las propiedades más importantes:
+🌟 Apuntes sobre Grid I - Parte 1
+🗂️ 1. Grid Container (Contenedor de Grid)
+El Grid Container es el elemento al que aplicamos display: grid; y que contiene los elementos hijos que se organizarán en una cuadrícula.
 
-1. order 🗂️
-Qué hace: Cambia el orden de los elementos en el contenedor sin cambiar el orden en el HTML.
-Cuándo usarlo: Cuando quieres reorganizar los elementos visualmente sin modificar el código HTML.
-🔹 Ejemplo para niños: Imagina que tienes fichas de colores en una fila y quieres mover la ficha roja al principio sin cambiar de lugar las otras.
+🔹 Ejemplo para niños: Imagina que tienes una hoja cuadriculada y decides que tus juguetes se van a colocar en cada cuadrado de la hoja.
 
-.ficha-roja {
-  order: 1; /* Se mueve al final, ya que el valor por defecto de 'order' es 0 */
+.contenedor-grid {
+  display: grid;
+  grid-template-columns: 100px 100px 100px; /* Tres columnas de 100px cada una */
+  grid-template-rows: 100px 100px; /* Dos filas de 100px cada una */
 }
 
-2. flex-grow 🌱
-Qué hace: Define cuánto puede crecer un elemento si hay espacio extra en el contenedor.
-Cuándo usarlo: Cuando quieres que un elemento crezca más que los demás en la misma línea.
-🔹 Ejemplo para niños: Imagina que tienes caramelos y uno de ellos puede crecer para ocupar más espacio que los otros si hay espacio libre.
+🧱 2. Grid Line (Líneas de la Cuadrícula)
+Las grid lines son las líneas que dividen las columnas y filas en un contenedor de grid. Estas líneas ayudan a posicionar y organizar los elementos.
 
-.caramelo-grande {
-  flex-grow: 2; /* Este caramelo crecerá el doble de los demás */
+🔹 Ejemplo visual para niños: Piensa en las líneas que dividen las casillas en una hoja de cuadros.
+
+📦 3. Grid Cell (Celda de la Cuadrícula)
+Una grid cell es una sola casilla en la cuadrícula, donde se colocan los elementos. Es la unidad más pequeña en un grid.
+
+🔹 Ejemplo para niños: Es como colocar un juguete en una sola casilla de la hoja cuadriculada.
+
+🏠 4. Grid Area (Área de la Cuadrícula)
+Una grid area es un espacio que abarca varias celdas y se usa para agrupar elementos o posicionarlos.
+
+🔹 Ejemplo para niños: Imagina que juntas cuatro casillas para colocar un juguete más grande.   
+.elemento {
+  grid-area: 1 / 1 / 3 / 3; /* Ocupa desde la fila 1 a la 3 y la columna 1 a la 3 */
 }
 
-3. flex-shrink 📉
-Qué hace: Controla cuánto puede reducirse un elemento si el contenedor es más pequeño.
-Cuándo usarlo: Cuando quieres que algunos elementos se reduzcan más que otros al disminuir el tamaño de la ventana.
-🔹 Ejemplo para niños: Imagina que tienes globos y algunos pueden encogerse más que otros si el espacio se hace pequeño.
+📏 5. Grid Track (Pista de la Cuadrícula)
+Un grid track es el espacio entre dos grid lines, formando una fila o una columna.
 
-.globo-pequeño {
-  flex-shrink: 3; /* Este globo se encogerá más que los demás */
-}
+🔹 Ejemplo para niños: Es como una fila completa de casillas en tu hoja cuadriculada.
 
-4. flex-basis 📏
-Qué hace: Define el tamaño base inicial de un elemento antes de que se apliquen flex-grow o flex-shrink.
-Cuándo usarlo: Cuando quieres que un elemento comience con un tamaño específico.
-🔹 Ejemplo para niños: Imagina que tienes una caja de juguetes y defines que cada juguete debe empezar ocupando 100px de espacio.
+➖ 6. Grid Gap (Espacio entre Celdas)
+El grid gap define el espacio entre las celdas de la cuadrícula. Puede usarse gap, row-gap o column-gap.
 
-.juguete {
-  flex-basis: 100px; /* El juguete empieza con un tamaño de 100px */
-}
+🔹 Ejemplo para niños: Piensa en dejar un pequeño espacio entre tus juguetes para que no se toquen.   
 
-5. align-self 🎯
-Qué hace: Permite alinear un elemento hijo individualmente, sobreescribiendo align-items del contenedor.
-Cuándo usarlo: Cuando un solo elemento necesita una alineación diferente a los demás.
-🔹 Ejemplo para niños: Imagina que en una fila de niños, uno quiere estirarse para ponerse en el medio mientras los otros siguen alineados al inicio.
-
-.niño-especial {
-  align-self: center; /* Solo este niño se alinea al centro verticalmente */
+.contenedor-grid {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px;
+  gap: 10px; /* Espacio de 10px entre las celdas */
 }
 
 🔑 Resumen para Recordar
-order: Cambia el orden de los elementos en el contenedor sin modificar el HTML.
-flex-grow: Controla cuánto puede crecer un elemento si hay espacio extra.
-flex-shrink: Define cuánto puede encogerse un elemento si el contenedor es más pequeño.
-flex-basis: Especifica el tamaño base inicial de un elemento antes de aplicar flex-grow o flex-shrink.
-align-self: Permite alinear un elemento hijo individualmente, sobrescribiendo align-items del contenedor padre.
+Grid Container: El elemento principal con display: grid.
+Grid Line: Las líneas que dividen columnas y filas.
+Grid Cell: La unidad más pequeña de la cuadrícula.
+Grid Area: Espacio que abarca varias celdas.
+Grid Track: Una fila o columna completa.
+Grid Gap: Espacio entre las celdas.
