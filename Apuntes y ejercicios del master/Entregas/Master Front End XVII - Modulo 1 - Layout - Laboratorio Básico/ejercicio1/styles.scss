@@ -1,46 +1,54 @@
-// Definimos un mixin para generar las cajas de colores
+// 🚀 Mixin para generar las clases de colores con tonos darken y lighten usando adjust()
 @mixin generate-color-classes($color, $name) {
   @for $i from 1 through 4 {
-    .#{$name}-darken-#{$i} { 
-      background-color: darken($color, $i * 5%); 
-      color: #fff; 
+    .#{$name}-darken-#{$i} {
+      // 💡 Oscurecemos el color usando adjust() para evitar advertencias de deprecación
+      background-color: adjust($color, $lightness: -$i * 5%);
+      color: #fff; // 🖋️ Texto blanco para mejor visibilidad
     }
-    .#{$name}-lighten-#{$i} { 
-      background-color: lighten($color, $i * 5%); 
-      color: #333; 
+    .#{$name}-lighten-#{$i} {
+      // 💡 Aclaramos el color usando adjust() para evitar advertencias de deprecación
+      background-color: adjust($color, $lightness: $i * 5%);
+      color: #333; // 🖋️ Texto oscuro para que sea fácil de leer
     }
   }
+  // 🎨 Clase para el color base
   .#{$name}-base-color {
     background-color: $color;
-    color: #fff;
+    color: #fff; // 🖋️ Texto blanco para resaltar sobre el color base
   }
 }
 
-// Generamos las clases de colores usando el mixin
+// 🟥 Generamos las clases de la fila roja
 @include generate-color-classes(#e74c3c, "red");
+// 🟦 Generamos las clases de la fila azul
 @include generate-color-classes(#3498db, "blue");
+// 🟩 Generamos las clases de la fila verde
 @include generate-color-classes(#2ecc71, "green");
 
+// 💡 Configuración del contenedor
 .container {
   display: flex;
-  flex-direction: column;
-  gap: 10px; // Espacio reducido entre las filas
+  flex-direction: column; // 📚 Las filas se apilan una encima de otra
+  gap: 10px; // 🔗 Espacio entre las filas
 }
 
+// 💡 Configuración de las filas
 .container > div {
-  display: flex;
-  gap: 5px; // Espacio reducido entre las cajas
+  display: flex; // 🔀 Los elementos de cada fila se alinean en línea
+  gap: 5px; // 🔗 Espacio entre las cajas
 }
 
+// 📦 Configuración general de las cajas
 .box {
-  width: 100px;
-  height: 100px;
+  width: 100px; // 📏 Ancho de la caja
+  height: 100px; // 📏 Alto de la caja
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  font-family: 'Roboto', sans-serif; /* Fuente Roboto */
-  margin: 2px; // Margen reducido para acercar las cajas
-  border-radius: 8px; // Esquinas redondeadas
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); // Sombra sutil
+  justify-content: center; // 📍 Centrado horizontal del texto
+  align-items: center; // 📍 Centrado vertical del texto
+  font-size: 14px; // 🔠 Tamaño de fuente del texto
+  font-family: 'Roboto', sans-serif; // 💬 Fuente Roboto para un estilo moderno
+  margin: 2px; // 🧩 Margen pequeño para separar las cajas
+  border-radius: 8px; // 🔵 Esquinas redondeadas para suavizar el diseño
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); // 🌫️ Sombra sutil para dar profundidad
 }
