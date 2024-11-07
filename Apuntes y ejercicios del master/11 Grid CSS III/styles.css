@@ -1,0 +1,48 @@
+/* Estilos generales */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Contenedor de Grid */
+.contenedor-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 100px 200px 100px;
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "footer footer footer";
+  gap: 15px;
+  margin: 20px auto;
+  width: 90%;
+  border: 2px solid #ccc;
+}
+
+/* Estilos de las áreas */
+.header {
+  grid-area: header;
+  background-color: lightblue;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: lightgreen;
+}
+
+.main {
+  grid-area: main;
+  background-color: lightcoral;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: lightgray;
+}
+
+.item {
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
