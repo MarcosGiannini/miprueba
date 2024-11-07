@@ -1,0 +1,20 @@
+// Mixin para crear un sistema de columnas responsivas
+@mixin columnas-responsivas($total-columnas) {
+  @for $i from 1 through $total-columnas {
+    .col-#{$i} {
+      width: (100% / $total-columnas) * $i; // Calcula el ancho proporcional
+      padding: 10px; // Espaciado interno para ver mejor el contenido
+      background-color: lighten(#3498db, $i * 5%); // Color variable para cada columna
+    }
+  }
+}
+
+// Aplicación del mixin para 12 columnas
+@include columnas-responsivas(12);
+
+// Estilos adicionales para la cuadrícula
+.grid {
+  display: flex;
+  flex-wrap: wrap; // Permite que las columnas se distribuyan en varias filas
+  gap: 10px; // Espacio entre columnas
+}
