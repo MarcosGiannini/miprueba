@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Proyecto</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Enlaza tu archivo CSS aquí -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Alineación en CSS</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Enlace al CSS externo -->
 </head>
 <body>
-    <h1>Bienvenido a Mi Proyecto</h1>
-    <p>Este es un ejemplo básico de HTML con un contenedor.</p>
-    
-    <!-- Aquí está tu div -->
-    <div style="display: flex; background-color: aqua; border: 2px solid salmon;">
-        <div>🌟 Elemento 1</div>
-        <div>🌟 Elemento 2</div>
-        <div>🌟 Elemento 3</div>
-      </div>
+  <h1>Ejemplos de Alineación en CSS</h1>
 
-      <div style="display: flex; flex-flow: row wrap; background-color: aqua; border: 2px solid salmon;">
-        <div>🍭 Elemento 1</div>
-        <div>🍭 Elemento 2</div>
-        <div>🍭 Elemento 3</div>
-        <div>🍭 Elemento 4</div>
-        <div>🍭 Elemento 1</div>
-        <div>🍭 Elemento 2</div>
-        <div>🍭 Elemento 3</div>
-        <div>🍭 Elemento 4</div>
-        <div>🍭 Elemento 1</div>
-        <div>🍭 Elemento 2</div>
-        <div>🍭 Elemento 3</div>
-        <div>🍭 Elemento 4</div>
-        <div>🍭 Elemento 1</div>
-        <div>🍭 Elemento 2</div>
-        <div>🍭 Elemento 3</div>
-        <div>🍭 Elemento 4</div>
-      </div>
-    
-    
-    <script src="script.js"></script> <!-- Opcional, solo si tienes scripts -->
+  <!-- Justify Content -->
+  <section>
+    <h2>Justify Content: Espacio alrededor</h2>
+    <p>La propiedad <code>justify-content</code> alinea los elementos horizontalmente en el contenedor. En este caso, los elementos tienen espacio alrededor.</p>
+    <div class="contenedor-justify">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+  </section>
+
+  <!-- Align Items -->
+  <section>
+    <h2>Align Items: Centro vertical</h2>
+    <p>La propiedad <code>align-items</code> alinea los elementos verticalmente en el contenedor. Aquí los elementos están centrados verticalmente.</p>
+    <div class="contenedor-align-items">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+    </div>
+  </section>
+
+  <!-- Align Content -->
+  <section>
+    <h2>Align Content: Espacio entre filas</h2>
+    <p>La propiedad <code>align-content</code> se usa para alinear múltiples filas de elementos verticalmente. Aquí las filas tienen espacio entre ellas.</p>
+    <div class="contenedor-align-content">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+  </section>
 </body>
 </html>

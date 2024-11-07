@@ -1,55 +1,64 @@
-🌈 Apuntes de Flexbox
-Flexbox es como un "superpoder" para organizar cosas en filas y columnas de manera fácil. ¡Aquí van los atributos más útiles para usar en el trabajo! 🎉
+🎯 Propiedades de Alineación en CSS
+Cuando trabajas con Flexbox o CSS Grid, las propiedades de alineación ayudan a organizar elementos de forma ordenada y agradable. Vamos a ver las propiedades más usadas: justify-content, align-items y align-content.
 
-1. display: flex; 🎯
-Activa el "modo Flexbox" en un contenedor.
+🚀 1. justify-content
+Imagina que estás organizando juguetes en una estantería 🧸. La propiedad justify-content te ayuda a decidir cómo se alinean los elementos horizontalmente (de izquierda a derecha).
 
-<div style="display: flex;">
-  <div>🌟 Elemento 1</div>
-  <div>🌟 Elemento 2</div>
-  <div>🌟 Elemento 3</div>
+Valores comunes:
+
+- flex-start: Los juguetes están todos al principio de la estantería (izquierda).
+- center: Los juguetes están en el centro de la estantería.
+- flex-end: Los juguetes están al final de la estantería (derecha).
+- space-between: Los juguetes están separados uniformemente, con espacio solo entre ellos.
+- space-around: Espacio entre y alrededor de los juguetes.
+🔹 Ejemplo de justify-content:
+
+.contenedor {
+  display: flex;
+  justify-content: center; /* Coloca los elementos en el centro */
+}
+<div class="contenedor">
+  <div class="item">🧸</div>
+  <div class="item">🚗</div>
+  <div class="item">🪀</div>
 </div>
 
-2. flex-direction 🧭
-¿Cómo quieres ordenar las cosas?
 
-row ➡️: Fila, de izquierda a derecha.
-column ⬇️: Columna, de arriba a abajo.
-row-reverse ⬅️: Fila de derecha a izquierda.
-column-reverse ⬆️: Columna de abajo hacia arriba.
+🧲 2. align-items
+Ahora imagina que los juguetes están en una caja y puedes moverlos verticalmente dentro de ella. align-items define cómo se alinean los elementos en la dirección vertical (de arriba a abajo).
 
-<div style="display: flex; flex-direction: row;">
-  <div>🍎 Elemento 1</div>
-  <div>🍊 Elemento 2</div>
-  <div>🍌 Elemento 3</div>
-</div>
+Valores comunes:
 
-3. flex-wrap 🎁
-¿Quieres que los elementos se acomoden en varias filas si no caben?
+flex-start: Los juguetes se alinean al borde superior de la caja.
+center: Los juguetes se alinean en el centro vertical de la caja.
+flex-end: Los juguetes se alinean al borde inferior de la caja.
+stretch: Los juguetes se estiran para ocupar toda la altura de la caja.
+🔹 Ejemplo de align-items:
 
-nowrap 🚫: Todos en una sola fila.
-wrap 🔄: Si no caben, se van a la siguiente fila.
-wrap-reverse 🔄: Como wrap, pero las filas se acumulan al revés.
+.contenedor {
+  display: flex;
+  align-items: center; /* Coloca los elementos en el centro vertical */
+}
 
-<div style="display: flex; flex-wrap: wrap;">
-  <div>🍉 Elemento 1</div>
-  <div>🍉 Elemento 2</div>
-  <div>🍉 Elemento 3</div>
-  <div>🍉 Elemento 4</div>
-</div>
+🏗️ 3. align-content
+Si tienes varias filas de juguetes y quieres decidir cómo se alinean todas las filas en el contenedor, usas align-content. Esto solo se nota si hay múltiples líneas de elementos (como en un flexbox que se ha envuelto).
 
-4. flex-flow 🌊
-Combina flex-direction y flex-wrap en una sola línea.
+Valores comunes:
 
-Ejemplo: flex-flow: row wrap; organiza los elementos en una fila (row) y si no caben, los envuelve en varias filas (wrap).
+- flex-start: Las filas se alinean al borde superior del contenedor.
+- center: Las filas se colocan en el centro vertical.
+- flex-end: Las filas se alinean al borde inferior.
+- space-between: Las filas tienen espacio entre ellas.
+- space-around: Espacio entre y alrededor de las filas.
+🔹 Ejemplo de align-content:
 
-<div style="display: flex; flex-flow: row wrap;">
-  <div>🍭 Elemento 1</div>
-  <div>🍭 Elemento 2</div>
-  <div>🍭 Elemento 3</div>
-  <div>🍭 Elemento 4</div>
-</div>
+.contenedor {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+  align-content: space-between; /* Coloca las filas con espacio entre ellas */
+}
 
-🔍 Aquí, los elementos se organizan en una fila y, si no caben, se colocan en una nueva fila debajo.
-
-TIP: Flexbox es genial para organizar cosas en filas y columnas de forma adaptable. Ideal para diferentes tamaños de pantalla 📱💻.
+🔑 Resumen para Recordar
+- justify-content: Alinea los elementos horizontalmente (como organizarlos en una estantería).
+- align-items: Alinea los elementos verticalmente en una línea (como juguetes en una caja).
+- align-content: Alinea múltiples filas de elementos verticalmente en el contenedor.
