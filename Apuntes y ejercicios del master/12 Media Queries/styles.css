@@ -1,0 +1,22 @@
+/* Estilos base para Mobile First */
+.contenedor {
+  font-size: 14px;
+  background-color: lightgreen;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Adaptación para pantallas más grandes */
+@media (min-width: 768px) {
+  .contenedor {
+    font-size: 18px;
+    background-color: lightblue;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contenedor {
+    font-size: 22px;
+    background-color: lightcoral;
+  }
+}
