@@ -1,0 +1,44 @@
+// Función que multiplica dos valores para calcular un espacio
+@function calcular-espacio($base, $factor) {
+  @return $base * $factor; // Devuelve el resultado de la multiplicación
+}
+
+// Mixin que aplica bordes redondeados con prefijos para compatibilidad
+@mixin redondear($radio) {
+  border-radius: $radio; // Bordes redondeados estándar
+  -webkit-border-radius: $radio; // Bordes redondeados para navegadores antiguos de Webkit
+  -moz-border-radius: $radio; // Bordes redondeados para navegadores antiguos de Mozilla
+}
+
+// Uso de @import para incluir otros archivos (comentado para la demo)
+// @import 'variables'; // Importa un archivo que contiene variables
+// @import 'mixins'; // Importa un archivo que contiene mixins
+
+// Estilos para el contenedor
+.container {
+  margin: calcular-espacio(10px, 2); // Aplica un margen calculado de 20px (10px * 2)
+}
+
+// Estilos para el botón básico
+.btn {
+  padding: 10px; // Espaciado interno de 10px
+  background-color: #3498db; // Fondo azul
+  color: white; // Texto blanco
+}
+
+// Botón grande que hereda los estilos de .btn y añade su propio tamaño de fuente
+.btn-grande {
+  @extend .btn; // Hereda todos los estilos de .btn
+  font-size: 20px; // Tamaño de fuente más grande
+}
+
+// Estilos para la caja con media query anidada
+.caja {
+  background-color: lightgreen; // Fondo verde claro
+
+  @include redondear(10px); // Aplica bordes redondeados de 10px usando el mixin
+
+  @media (min-width: 768px) { // Regla de medios anidada para pantallas grandes
+    background-color: lightblue; // Cambia el fondo a azul claro en pantallas mayores a 768px
+  }
+}
