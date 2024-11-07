@@ -1,0 +1,79 @@
+.col-1 {
+  width: 8.3333333333%;
+  padding: 10px;
+  background-color: rgb(73.6589958159, 162.989539749, 222.8410041841);
+}
+
+.col-2 {
+  width: 16.6666666667%;
+  padding: 10px;
+  background-color: rgb(95.3179916318, 173.9790794979, 226.6820083682);
+}
+
+.col-3 {
+  width: 25%;
+  padding: 10px;
+  background-color: rgb(116.9769874477, 184.9686192469, 230.5230125523);
+}
+
+.col-4 {
+  width: 33.3333333333%;
+  padding: 10px;
+  background-color: rgb(138.6359832636, 195.9581589958, 234.3640167364);
+}
+
+.col-5 {
+  width: 41.6666666667%;
+  padding: 10px;
+  background-color: rgb(160.2949790795, 206.9476987448, 238.2050209205);
+}
+
+.col-6 {
+  width: 50%;
+  padding: 10px;
+  background-color: rgb(181.9539748954, 217.9372384937, 242.0460251046);
+}
+
+.col-7 {
+  width: 58.3333333333%;
+  padding: 10px;
+  background-color: rgb(203.6129707113, 228.9267782427, 245.8870292887);
+}
+
+.col-8 {
+  width: 66.6666666667%;
+  padding: 10px;
+  background-color: rgb(225.2719665272, 239.9163179916, 249.7280334728);
+}
+
+.col-9 {
+  width: 75%;
+  padding: 10px;
+  background-color: rgb(246.9309623431, 250.9058577406, 253.5690376569);
+}
+
+.col-10 {
+  width: 83.3333333333%;
+  padding: 10px;
+  background-color: white;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+  padding: 10px;
+  background-color: white;
+}
+
+.col-12 {
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/*# sourceMappingURL=styles.css.map */
