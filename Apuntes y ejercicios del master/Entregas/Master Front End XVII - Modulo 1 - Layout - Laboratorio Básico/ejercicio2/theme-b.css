@@ -2,67 +2,42 @@
   width: 200px;
   height: 60px;
   margin: 10px 0;
-  border-radius: 10px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
   text-align: center;
   line-height: 60px;
-  font-family: "Roboto", sans-serif;
+  font-family: #000000;
 }
 
 .base {
-  background-color: #e74c3c;
+  background-color: #0000FF;
   color: #fff;
 }
 
 .important {
-  background-color: #8b0000;
+  background-color: #00008B;
   color: #fff;
 }
 
 .warning {
-  background-color: #f4cccc;
+  background-color: #00FFFF;
   color: #333;
 }
 
 .principal-font {
-  font-family: "Roboto", sans-serif;
+  font-family: #000000;
   font-size: 24px;
-  color: #e74c3c;
+  color: #0000FF;
 }
 
 .secondary-font {
-  font-family: "Roboto", sans-serif;
+  font-family: #505050;
   font-size: 20px;
-  color: #8b0000;
+  color: #00008B;
 }
 
 .box-shadow {
   padding: 20px;
   border: 1px solid #ccc;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.base {
-  background-color: #0000ff;
-  color: #fff;
-}
-
-.important {
-  background-color: #00008b;
-  color: #fff;
-}
-
-.warning {
-  background-color: #00ffff;
-  color: #333;
-}
-
-.principal-font {
-  color: #0000ff;
-}
-
-.secondary-font {
-  color: #00008b;
-}
-
-/*# sourceMappingURL=theme-b.css.map */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}/*# sourceMappingURL=theme-b.css.map */
