@@ -1,0 +1,52 @@
+// ================================
+// Global Styles and Variables
+// ================================
+
+// This file contains global styles and variables 
+// to ensure consistency across the project.
+
+// Colors
+$primary-color: #2c82cf; // Blue
+$secondary-color: #ca3737; // Red
+$navbar-bg: black;
+
+// Link styles
+$link-color: white; // Default link color
+$link-hover-color: underline; // Hover effect for links
+
+// Typography
+$base-font-size: 14px;
+
+// Spacing
+$base-padding: 10px;
+
+@mixin link-style($color, $hover-effect) {
+    color: $color;
+    text-decoration: none;
+  
+    &:hover {
+      text-decoration: $hover-effect;
+    }
+  }
+body {
+    background-color: $primary-color; // Background color for the body
+    color: $secondary-color; // Text color
+    font-size: $base-font-size; // Font size
+    padding: $base-padding; // Padding
+  }
+
+// ================================
+// Navigation bar styles
+// ================================
+.navbar {
+    background-color: $navbar-bg; // Use global variable for navbar background
+  }
+  
+  .navbar ul li a {
+    @include link-style($link-color, $link-hover-color);
+  }
+  
+  .navbar ul li a:hover {
+    text-decoration: $link-hover-color; // Use global variable for hover style
+  }
+  

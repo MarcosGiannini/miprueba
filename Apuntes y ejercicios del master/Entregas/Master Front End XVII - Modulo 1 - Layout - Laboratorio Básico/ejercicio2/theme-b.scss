@@ -1,48 +1,48 @@
 // Variables y estilos para el tema B (azul)
-$base-color: #0000ff; // 🔵 Azul vibrante
-$important-color: #00008b; // 🟦 Azul oscuro
-$warning-color: #00ffff; // 🟢 Cian para advertencias
-$font-principal: 'Roboto', sans-serif; // 🅰️ Fuente principal
-$border-radius: 10px; // 🔲 Bordes redondeados
-$box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3); // 🟧 Sombra más marcada
+$base-color: #0000FF; // Azul para "Base"
+$important-color: #00008B; // Azul oscuro para "Important"
+$warning-color: #00FFFF; // Cian claro para "Warning"
+$font-color-principal: #000000; // Negro para fuente principal
+$font-color-secondary: #505050; // Gris oscuro para secundaria
+$box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); // Sombra más intensa
+$border-radius: 5px; // Bordes más redondeados
 
 // Estilos generales para las cajas
 .box {
     width: 200px;
     height: 60px;
     margin: 10px 0;
-    border-radius: $border-radius;
-    box-shadow: $box-shadow;
+    border-radius: $border-radius; // Usa la variable del borde redondeado
+    box-shadow: $box-shadow; // Usa la sombra definida en el tema
     text-align: center;
     line-height: 60px; // Centra el texto verticalmente
-    font-family: $font-principal;
+    font-family: $font-color-principal; // Usa la fuente principal
 }
 
 // Clases específicas para los elementos
 .base {
-    background-color: $base-color;
+    background-color: $base-color; // Usa el color base definido en el tema
     color: #fff; // Texto blanco para mejor contraste
 }
 
 .important {
-    background-color: $important-color;
-    color: #fff; // También blanco para resaltar
+    background-color: $important-color; // Usa el color importante
+    color: #fff; // Texto blanco
 }
 
 .warning {
-    background-color: $warning-color;
-    color: #333; // Texto oscuro en fondo claro
+    background-color: $warning-color; // Usa el color de advertencia
+    color: #333; // Texto oscuro para contraste
 }
-
 // Estilos para las fuentes
 .principal-font {
-    font-family: $font-principal;
+    font-family: $font-color-principal;
     font-size: 24px;
     color: $base-color; // Usa el color base para destacar
 }
 
 .secondary-font {
-    font-family: $font-principal;
+    font-family: $font-color-secondary;
     font-size: 20px;
     color: $important-color; // Color importante para dar énfasis
 }
@@ -51,5 +51,5 @@ $box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3); // 🟧 Sombra más marcada
 .box-shadow {
     padding: 20px;
     border: 1px solid #ccc;
-    box-shadow: $box-shadow;
+    box-shadow: $box-shadow; // Usa la sombra del tema
 }
