@@ -1,0 +1,121 @@
+/* General */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9e5;
+}
+
+header {
+  background-color: #d6e8a3;
+  padding: 1rem;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.toolbar input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.page-title {
+  text-align: left;
+  padding-left: 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.page-container {
+  display: flex;
+}
+
+/* Navegación */
+nav {
+  flex: 0 0 15rem;
+  background-color: #5c432d;
+  color: #fff;
+  padding: 1rem;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-title {
+  text-align: left;
+  padding-left: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  background-color: #d6c9b2;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  text-align: left;
+}
+
+/* Tarjetas */
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem; /* Espaciado entre tarjetas */
+  margin: 0 auto;
+  max-width: 90%; /* Para centrar mejor todo */
+  padding: 2rem 0;
+}
+
+.card {
+  flex: 0 1 calc(25% - 1.5rem); /* Ocupan el 25% del ancho con espacio incluido */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.member-name {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Ajuste de la última fila */
+.list > .card:nth-last-child(2),
+.list > .card:nth-last-child(1) {
+  flex: 0 1 40%; /* Ocupan el 40% del ancho para dejar espacio entre ellas */
+  justify-self: center;
+}
+
+/* Footer */
+footer {
+  background-color: #d6e8a3;
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
