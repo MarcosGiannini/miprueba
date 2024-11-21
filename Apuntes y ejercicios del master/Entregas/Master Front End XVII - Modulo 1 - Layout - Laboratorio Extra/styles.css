@@ -1,13 +1,19 @@
 /* Estilos generales */
-body {
+html, body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f9f9e5;
+  height: 100%;
+}
+
+body {
+  background-color: #f9f9e5; /* Color de fondo general */
+  display: flex;
+  flex-direction: column;
 }
 
 header {
-  background-color: #d6e8a3;
-  padding: 0; /* Eliminar padding para que la toolbar ocupe todo el ancho */
+  background-color: #ffffe0; /* Color de fondo verde lima */
+  padding: 0;
 }
 
 .toolbar {
@@ -27,6 +33,12 @@ header {
   width: 200px; /* Ancho fijo para el campo de búsqueda */
 }
 
+.menu-toggle {
+  font-weight: bold;
+  text-align: center;
+  padding: 0 0 10px 0;
+}
+
 .user-info {
   font-size: 1rem;
   font-weight: normal; /* Texto sin negrita */
@@ -35,25 +47,32 @@ header {
 .page-title {
   text-align: left;
   padding: 1rem;
-  font-size: 1.8rem;
-  font-weight: bold;
+  background-color: #cee44f;
+  font-size: 1.5rem; /* Tamaño de fuente reducido */
+  color: white; /* Color del texto en blanco */
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .page-container {
   display: flex;
+  flex: 1;
+  height: 100%;
 }
 
 /* Estilos del menú */
 nav {
   flex: 0 0 15rem;
-  background-color: #5c432d;
+  background-color: #263326; /* Fondo verde oscuro */
   color: #fff;
-  padding: 1rem;
-}
-
-.menu-container {
+  padding: 1rem 0; /* Ajusta el padding superior e inferior */
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .menu-title {
@@ -68,25 +87,44 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 ul li {
-  background-color: #d6c9b2;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
-  border-radius: 4px;
+  width: 100%;
   text-align: left;
+  border-bottom: 1px solid #d3d3d3; /* Borde inferior gris suave */
+}
+
+ul li:last-child {
+  border-bottom: none; /* Elimina el borde inferior del último elemento */
+}
+
+ul li a {
+  display: block;
+  padding: 0.75rem;
+  text-decoration: none;
+  color: #333; /* Color del texto de los enlaces */
+  background-color: #ffffe0; /* Amarillo suave */
+  width: 100%;
+  box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+ul li a:hover {
+  background-color: #e0e0e0; /* Color de fondo al pasar el cursor */
 }
 
 /* Estilo de las tarjetas */
 main {
   flex: 1;
   padding: 2rem; /* Añade espacio alrededor del contenido principal */
+  background-color: #ebebeb;
+  overflow-y: auto; /* Permite el desplazamiento si el contenido es extenso */
 }
 
 .list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Primera y segunda fila con cuatro columnas */
+  grid-template-columns: repeat(4, 1fr); /* Cuatro columnas en pantallas grandes */
   gap: 1.5rem;
   margin: 0 auto;
   padding: 2rem 0;
@@ -124,11 +162,51 @@ main {
   justify-self: center;
 }
 
-/* Estilo del footer */
+/* Estilo del pie de página */
 footer {
-  background-color: #d6e8a3;
-  text-align: center;
+  background-color: #ffffe0; /* Color de fondo del pie de página */
+  text-align: left;
   padding: 1rem;
   font-weight: bold;
-  margin-top: 2rem;
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+  /* Ajustes en el menú */
+  nav {
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .menu-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  ul li a {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* Ajustes en el contenido principal */
+  main {
+    padding: 1rem;
+  }
+
+  .list {
+    grid-template-columns: 1fr; /* Una columna en lugar de cuatro */
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  .card {
+    padding: 0.5rem;
+  }
+
+  /* Ajustes en el pie de página */
+  footer {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
 }
