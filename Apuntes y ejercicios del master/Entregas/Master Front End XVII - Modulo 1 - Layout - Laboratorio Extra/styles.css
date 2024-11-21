@@ -1,4 +1,4 @@
-/* General */
+/* Estilos generales */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -7,14 +7,16 @@ body {
 
 header {
   background-color: #d6e8a3;
-  padding: 1rem;
+  padding: 0; /* Eliminar padding para que la toolbar ocupe todo el ancho */
 }
 
 .toolbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  background-color: white; /* Fondo blanco */
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .toolbar input {
@@ -22,11 +24,17 @@ header {
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+  width: 200px; /* Ancho fijo para el campo de búsqueda */
+}
+
+.user-info {
+  font-size: 1rem;
+  font-weight: normal; /* Texto sin negrita */
 }
 
 .page-title {
   text-align: left;
-  padding-left: 1rem;
+  padding: 1rem;
   font-size: 1.8rem;
   font-weight: bold;
 }
@@ -35,7 +43,7 @@ header {
   display: flex;
 }
 
-/* Navegación */
+/* Estilos del menú */
 nav {
   flex: 0 0 15rem;
   background-color: #5c432d;
@@ -70,19 +78,22 @@ ul li {
   text-align: left;
 }
 
-/* Tarjetas */
+/* Estilo de las tarjetas */
+main {
+  flex: 1;
+  padding: 2rem; /* Añade espacio alrededor del contenido principal */
+}
+
 .list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem; /* Espaciado entre tarjetas */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Primera y segunda fila con cuatro columnas */
+  gap: 1.5rem;
   margin: 0 auto;
-  max-width: 90%; /* Para centrar mejor todo */
   padding: 2rem 0;
+  max-width: 1200px; /* Limita el ancho máximo para centrar el contenido */
 }
 
 .card {
-  flex: 0 1 calc(25% - 1.5rem); /* Ocupan el 25% del ancho con espacio incluido */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,27 +102,29 @@ ul li {
   border-radius: 8px;
   background-color: white;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .card img {
   border-radius: 50%;
-  margin-bottom: 1rem;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 0.5rem;
 }
 
 .member-name {
-  text-align: center;
   font-size: 1rem;
   font-weight: bold;
 }
 
-/* Ajuste de la última fila */
-.list > .card:nth-last-child(2),
-.list > .card:nth-last-child(1) {
-  flex: 0 1 40%; /* Ocupan el 40% del ancho para dejar espacio entre ellas */
+/* Centrado de la tercera fila */
+.list > .card:nth-child(9),
+.list > .card:nth-child(10) {
+  grid-column: span 2; /* Cada tarjeta ocupa dos columnas */
   justify-self: center;
 }
 
-/* Footer */
+/* Estilo del footer */
 footer {
   background-color: #d6e8a3;
   text-align: center;
