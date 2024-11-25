@@ -17,3 +17,7 @@ Thumbs.db
 # Otros
 *.bak
 *.tmp
+
+# Excluir npm files
+package.json
+package-lock.json
