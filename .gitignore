@@ -1,5 +1,19 @@
-node_modules
-.parcel-cache
-dist
-package-lock.json
+# Node.js
+node_modules/
 
+# Parcel Cache
+.parcel-cache/
+
+# Distribución
+dist/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Otros
+*.bak
+*.tmp
