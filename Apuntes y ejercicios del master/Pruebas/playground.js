@@ -1,25 +1,27 @@
-class Person {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
+// Declare a variable for a and b
+let a = 1;
+let b = 4;
+const sum = a + b;
+const rest = a - b;
+const mult = a * b;
+const div = a / b;
+const power = a ** b;
+const mod = a % b;
 
-  // Declare method
-  introduce() {
-    console.log(`Hi, my name is ${this.name} and I am ${this.age} years old.`);
-  }
-}
+// Print the first message
+console.log(`The sum of a and b is: ${sum}`);
 
-class Student extends Person {
-  constructor(name, age, course) {
-    super(name, age);
-    this.course = course;
-  }
+// Print the second message
+console.log(`The rest of a and b is: ${rest}`);
 
-  introduce() {
-    console.log(`Hi, my name is ${this.name}, I am ${this.age} years old, and I am studying ${this.course}.`)
-  }
-}
+// Print the third message
+console.log(`The multiplication of a and b is: ${mult}`);
 
-const myPerson = new Student("Marcos", 39, "Front-End Development");
-myPerson.introduce();
+// Print the four message
+console.log(`The division of a and b is: ${div}`);
+
+// Print the five message
+console.log(`The power of a and b is: ${power}`);
+
+// Print the six message
+console.log(`The power of a and b is: ${mod}`);
